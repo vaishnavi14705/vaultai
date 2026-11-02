@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-navy-900 text-paper antialiased; font-family: Inter, system-ui, sans-serif; }
+@layer components {
+  .card { @apply bg-navy-800 border border-navy-700 rounded-2xl; }
+  .glass { @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl; }
+  .input { @apply w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2.5 outline-none focus:border-violet-500 transition; }
+  .btn { @apply rounded-xl px-5 py-2.5 font-semibold transition hover:-translate-y-0.5 disabled:opacity-40; }
+  .btn-primary { @apply btn bg-gradient-to-br from-violet-500 to-blue-500 text-white; }
+  .btn-ghost { @apply btn border border-navy-700 hover:bg-white/5; }
+  .muted { @apply text-slate-400; }
+  .skeleton { @apply animate-pulse bg-navy-700 rounded-lg; }
+}
