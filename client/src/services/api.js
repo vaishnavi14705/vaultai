@@ -1,5 +1,5 @@
 // All server communication lives here. In dev, Vite proxies /api to http://localhost:4000.
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000'
+const BASE = (import.meta.env.VITE_API_URL || 'http://localhost:4000') + '/api'
 
 export const getToken = () => { try { return localStorage.getItem('vault_token') } catch { return null } }
 export const setToken = (t) => { try { t ? localStorage.setItem('vault_token', t) : localStorage.removeItem('vault_token') } catch {} }
